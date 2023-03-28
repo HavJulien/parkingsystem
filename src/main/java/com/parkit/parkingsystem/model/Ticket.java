@@ -1,6 +1,5 @@
 package com.parkit.parkingsystem.model;
 
-import java.util.Calendar;
 import java.util.Date;
 
 public class Ticket {
@@ -10,6 +9,7 @@ public class Ticket {
     private double price;
     private Date inTime;
     private Date outTime;
+    private Boolean isClient = false;
 
     public int getId() {
         return id;
@@ -22,9 +22,9 @@ public class Ticket {
     public ParkingSpot getParkingSpot() {
         return parkingSpot;
     }
-
+    
     public void setParkingSpot(ParkingSpot parkingSpot) {
-        this.parkingSpot = parkingSpot;
+    	this.parkingSpot = parkingSpot;
     }
 
     public String getVehicleRegNumber() {
@@ -57,5 +57,13 @@ public class Ticket {
 
     public void setOutTime(Date outTime) {
         this.outTime = outTime;
+    }
+    
+    public Boolean isClient() {
+        return isClient;
+    }
+
+    public void setIsClient(Boolean isClient) {
+        this.isClient = isClient;
     }
 }
